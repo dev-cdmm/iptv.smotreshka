@@ -20,12 +20,12 @@ PHP скрипт генерации IPTV плейлиста `m3u8` и телеп
 
 ## Usage
 
-1. **Добавить данные авторизации для своего аккуанта в `index.php` и `xmltv/index.php`**  
+1. Добавить данные авторизации для своего аккуанта в `index.php` и `xmltv/index.php`
 
   		initSmotreshka("login","password","index.m3u8");
 
 
-2. **Пример URL плейлиста и телепрограммы для домена `iptv.domain`**
+2. Пример URL плейлиста и телепрограммы для домена `iptv.domain`
      * http://iptv.domain/
      * http://iptv.domain/xmltv/
 
