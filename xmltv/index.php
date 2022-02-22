@@ -7,11 +7,11 @@ function checkHTTP($curl, $expected_code = 200)
 }
 
 function xmlEscape($string) {
-    return str_replace(
-        array("&",     "<",    ">",    '"',      "'"),
-        array("&amp;", "&lt;", "&gt;", "&quot;", "&apos;"), 
-        $string
-    );
+	return str_replace(
+		array("&",     "<",    ">",    '"',      "'"),
+		array("&amp;", "&lt;", "&gt;", "&quot;", "&apos;"), 
+		$string
+	);
 }
 
 function generate($login,$password,$xmltv) {
@@ -107,9 +107,9 @@ function generate($login,$password,$xmltv) {
 
 function download($xmltv) {
 	header("Content-Type: application/octet-stream");
-    header("Content-Transfer-Encoding: Binary");
-    header("Content-disposition: attachment; filename=\"" . $xmltv.".gz" . "\"");
-    readfile($xmltv.".gz");
+	header("Content-Transfer-Encoding: Binary");
+	header("Content-disposition: attachment; filename=\"" . $xmltv.".gz" . "\"");
+	readfile($xmltv.".gz");
 	die();
 }
  
