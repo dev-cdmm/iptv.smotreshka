@@ -57,7 +57,7 @@ function generate($login,$password,$m3u8) {
 					if (levenshtein(strtolower(end($info->{"metaInfo"}->{"genres"})),strtolower($el)) <= 3) { $group = $el; break; } 
 				}
 				$description = "#EXTINF:-1 tvg-id=\"".$ch->{"id"}."\" tvg-name=\"".$info->{"metaInfo"}->{"title"}."\" tvg-logo=\"".$info->{"mediaInfo"}->{"thumbnails"}[0]->url."\" group-title=\"".$group."\",".substr($info->{"metaInfo"}->{"title"}, 4)."";
-			    fwrite($fplaylist, "$description\r\n$url\r\n");
+				fwrite($fplaylist, "$description\r\n$url\r\n");
 			}
 		}
 	}
@@ -74,9 +74,9 @@ function generate($login,$password,$m3u8) {
 
 function download($m3u8) {
 	header("Content-Type: application/octet-stream");
-    header("Content-Transfer-Encoding: Binary");
-    header("Content-disposition: attachment; filename=\"" . $m3u8 . "\"");
-    readfile($m3u8);
+	header("Content-Transfer-Encoding: Binary");
+	header("Content-disposition: attachment; filename=\"" . $m3u8 . "\"");
+	readfile($m3u8);
 	die();
 }
  
